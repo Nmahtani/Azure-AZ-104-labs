@@ -1,0 +1,17 @@
+{
+  "Name": "Storage Reader",
+  "Description": "Read-only access to Azure Blob Storage. Can list containers and read blobs but cannot write, delete, or modify storage configuration. Intended for auditors and BI tools.",
+  "Actions": [
+    "Microsoft.Storage/storageAccounts/read",
+    "Microsoft.Storage/storageAccounts/listKeys/action",
+    "Microsoft.Resources/subscriptions/resourceGroups/read"
+  ],
+  "NotActions": [],
+  "DataActions": [
+    "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/read"
+  ],
+  "NotDataActions": [],
+  "AssignableScopes": [
+    "/subscriptions/YOUR-SUBSCRIPTION-ID-HERE"
+  ]
+}
