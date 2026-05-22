@@ -1,0 +1,47 @@
+{
+  "@odata.type": "#microsoft.graph.macOSGeneralDeviceConfiguration",
+  "displayName": "macOS - Security Hardening Baseline",
+  "description": "Silently enforces security hardening on all enrolled macOS devices via Apple MDM payload. Assigned to grp-intune-macos dynamic group. Authored by Nikhil Mahtani.",
+  "version": 1,
+
+  "passwordRequired": true,
+  "passwordMinimumLength": 12,
+  "passwordRequiredType": "alphanumeric",
+  "passwordMinutesOfInactivityBeforeScreenTimeout": 5,
+  "passwordExpirationDays": 90,
+  "passwordPreviousPasswordBlockCount": 5,
+  "passwordBlockSimple": true,
+  "passwordMinimumCharacterSetCount": 3,
+
+  "firewallEnabled": true,
+  "firewallBlockAllIncoming": false,
+  "firewallEnableStealthMode": true,
+
+  "gatekeeperAllowedAppSource": "macAppStoreAndIdentifiedDevelopers",
+
+  "softwareUpdatesEnforcedDelayInDays": 0,
+  "updateDelayPolicy": "none",
+
+  "privacyAccessControls": [
+    {
+      "displayName": "Microsoft Defender for Endpoint",
+      "identifier": "com.microsoft.wdav",
+      "identifierType": "bundleID",
+      "codeRequirement": "identifier \"com.microsoft.wdav\"",
+      "staticCodeValidation": false,
+      "accessibility": "enabled",
+      "systemPolicyAllFiles": "enabled",
+      "systemPolicySysAdminFiles": "enabled",
+      "appleEventsAllowedReceivers": []
+    }
+  ],
+
+  "assignments": [
+    {
+      "target": {
+        "@odata.type": "#microsoft.graph.groupAssignmentTarget",
+        "groupId": "grp-intune-macos"
+      }
+    }
+  ]
+}

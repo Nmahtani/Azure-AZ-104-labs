@@ -1,0 +1,40 @@
+{
+  "@odata.type": "#microsoft.graph.windows10CompliancePolicy",
+  "displayName": "Windows 10/11 - Security Compliance Baseline",
+  "description": "Enforces minimum security requirements for all Windows corporate devices. Non-compliant devices are blocked from M365 resources via Conditional Access after 72 hours. Authored by Nikhil Mahtani.",
+  "scheduledActionsForRule": [
+    {
+      "ruleName": "PasswordRequired",
+      "scheduledActionConfigurations": [
+        {
+          "actionType": "block",
+          "gracePeriodHours": 72,
+          "notificationTemplateId": ""
+        }
+      ]
+    }
+  ],
+  "passwordRequired": true,
+  "passwordMinimumLength": 12,
+  "passwordRequiredType": "alphanumeric",
+  "passwordMinutesOfInactivityBeforeLock": 5,
+  "passwordExpirationDays": 90,
+  "passwordPreviousPasswordBlockCount": 5,
+  "passwordRequireToUnlockFromIdle": true,
+  "bitLockerEnabled": true,
+  "secureBootEnabled": true,
+  "codeIntegrityEnabled": true,
+  "tpmRequired": true,
+  "activeFirewallRequired": true,
+  "defenderEnabled": true,
+  "rtpEnabled": true,
+  "antivirusRequired": true,
+  "antiSpywareRequired": true,
+  "signatureOutOfDate": false,
+  "osMinimumVersion": "10.0.19041",
+  "osMaximumVersion": null,
+  "deviceThreatProtectionEnabled": true,
+  "deviceThreatProtectionRequiredSecurityLevel": "medium",
+  "storageRequireEncryption": true,
+  "validOperatingSystemBuildRanges": []
+}

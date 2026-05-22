@@ -1,0 +1,34 @@
+{
+  "@odata.type": "#microsoft.graph.macOSCompliancePolicy",
+  "displayName": "macOS - Security Compliance Baseline",
+  "description": "Enforces minimum security requirements for all macOS corporate devices. Non-compliant devices are blocked from M365 resources via Conditional Access after 72 hours. Authored by Nikhil Mahtani.",
+  "scheduledActionsForRule": [
+    {
+      "ruleName": "PasswordRequired",
+      "scheduledActionConfigurations": [
+        {
+          "actionType": "block",
+          "gracePeriodHours": 72,
+          "notificationTemplateId": ""
+        }
+      ]
+    }
+  ],
+  "passwordRequired": true,
+  "passwordMinimumLength": 12,
+  "passwordRequiredType": "alphanumeric",
+  "passwordMinutesOfInactivityBeforeLock": 5,
+  "passwordExpirationDays": 90,
+  "passwordPreviousPasswordBlockCount": 5,
+  "passwordBlockSimple": true,
+  "osMinimumVersion": "13.0",
+  "osMaximumVersion": null,
+  "systemIntegrityProtectionEnabled": true,
+  "storageRequireEncryption": true,
+  "firewallEnabled": true,
+  "firewallBlockAllIncoming": false,
+  "firewallEnableStealthMode": true,
+  "gatekeeperAllowedAppSource": "macAppStoreAndIdentifiedDevelopers",
+  "deviceThreatProtectionEnabled": true,
+  "deviceThreatProtectionRequiredSecurityLevel": "medium"
+}

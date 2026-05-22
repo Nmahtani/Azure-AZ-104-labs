@@ -1,0 +1,53 @@
+{
+  "@odata.type": "#microsoft.graph.windows10GeneralConfiguration",
+  "displayName": "Windows 10/11 - Security Hardening Baseline",
+  "description": "Silently enforces security hardening on all enrolled Windows devices via MDM CSP. Assigned to grp-intune-windows dynamic group. Authored by Nikhil Mahtani.",
+  "version": 1,
+
+  "passwordRequired": true,
+  "passwordMinimumLength": 12,
+  "passwordRequiredType": "alphanumeric",
+  "passwordMinutesOfInactivityBeforeScreenTimeout": 5,
+  "passwordExpirationDays": 90,
+  "passwordPreviousPasswordBlockCount": 5,
+  "passwordBlockSimple": true,
+  "passwordRequireWhenResumeFromIdleState": true,
+
+  "storageBlockRemovableStorage": true,
+  "storageRequireMobileDeviceEncryption": true,
+
+  "diagnosticsDataSubmissionMode": "security",
+
+  "smartScreenEnableAppInstallControl": true,
+  "smartScreenBlockOverrideForFiles": true,
+
+  "defenderRequireRealTimeMonitoring": true,
+  "defenderRequireBehaviorMonitoring": true,
+  "defenderRequireNetworkInspectionSystem": true,
+  "defenderScanDownloads": true,
+  "defenderSignatureUpdateIntervalInHours": 4,
+  "defenderMonitorFileActivity": "monitorAllFiles",
+  "defenderDaysBeforeDeletingQuarantinedMalware": 30,
+  "defenderScanMaxCpu": 50,
+  "defenderScanArchiveFiles": true,
+  "defenderScanIncomingMail": true,
+  "defenderScanRemovableDrivesDuringFullScan": true,
+  "defenderRequireCloudProtection": true,
+  "defenderCloudBlockLevel": "high",
+  "defenderPromptForSampleSubmission": "sendSafeSamplesAutomatically",
+  "defenderScheduledQuickScanTime": "60",
+  "defenderScanType": "quick",
+  "defenderSystemScanSchedule": "monday",
+
+  "lockScreenTimeoutInSeconds": 300,
+  "lockScreenBlockCortana": true,
+
+  "assignments": [
+    {
+      "target": {
+        "@odata.type": "#microsoft.graph.groupAssignmentTarget",
+        "groupId": "grp-intune-windows"
+      }
+    }
+  ]
+}
