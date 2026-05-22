@@ -1,4 +1,4 @@
-# intune-device-management
+# az104-device-management
 
 > **Author:** Nikhil Mahtani · IT Systems Administrator  
 > **Stack:** Microsoft Intune · Entra ID · PowerShell · Microsoft Graph API  
