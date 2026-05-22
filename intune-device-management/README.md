@@ -1,6 +1,6 @@
 # az104-device-management
 
-> **Author:** Nikhil Mahtani · IT Systems Administrator  
+> **Author:** Nikhil Mahtani · Cloud support engineer 
 > **Stack:** Microsoft Intune · Entra ID · PowerShell · Microsoft Graph API  
 > **Scope:** End-to-end MDM deployment — Windows 10/11 and macOS, from zero to compliant
 
